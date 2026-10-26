@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crave & Co. | Fresh Food, Good Mood</title>
+  <meta name="description" content="Explore delicious food, fresh ingredients and signature dishes at Crave & Co.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="logo">crave<span>&co.</span></a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#menu">Our Menu</a>
+      <a href="#about">Our Story</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="cart-button" id="cartButton">
+      🛍 Cart <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">GOOD FOOD. GOOD MOOD.</span>
+        <h1>Made with love.<br>Served with <span>flavour.</span></h1>
+        <p>Fresh ingredients, unforgettable flavours, and a little magic in every bite.</p>
+
+        <div class="hero-actions">
+          <a href="#menu" class="primary-btn">Explore Our Menu ↗</a>
+          <span class="rating">★★★★★ <small>4.9 / 5 food lovers</small></span>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1100&q=85"
+          alt="Fresh gourmet salad with colorful ingredients">
+        <div class="image-note">
+          <span>✦</span>
+          <div>
+            <strong>Freshly prepared</strong>
+            <small>Every single day</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-decoration">EST. 2024 · MADE FRESH</div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">A LITTLE SOMETHING FOR EVERYONE</span>
+          <h2>Our delicious <span>menu.</span></h2>
+        </div>
+        <p>Good ingredients. Beautiful plates.<br>Flavours worth coming back for.</p>
+      </div>
+
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-category="All">All dishes</button>
+        <button class="filter-btn" data-category="Starters">Starters</button>
+        <button class="filter-btn" data-category="Mains">Main course</button>
+        <button class="filter-btn" data-category="Desserts">Desserts</button>
+        <button class="filter-btn" data-category="Drinks">Drinks</button>
+      </div>
+
+      <div class="menu-grid" id="menuGrid"></div>
+
+      <p class="menu-note">✦ Made fresh, just for you. Prices are in Indian rupees.</p>
+    </section>
+
+    <section class="story-section" id="about">
+      <div class="story-image">
+        <img
+          src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=85"
+          alt="Warm and welcoming restaurant dining space">
+      </div>
+      <div class="story-content">
+        <span class="eyebrow">MORE THAN JUST A MEAL</span>
+        <h2>Every plate tells <span>a story.</span></h2>
+        <p>We believe the best moments happen around a table. That's why we bring fresh ingredients, thoughtful recipes, and a whole lot of heart to everything we serve.</p>
+        <a href="#menu" class="text-link">Find your favourite dish ↗</a>
+      </div>
+    </section>
+
+    <section class="cta-section" id="contact">
+      <span class="eyebrow">YOUR TABLE IS WAITING</span>
+      <h2>Hungry yet?</h2>
+      <p>Discover your next favourite dish today.</p>
+      <a href="#menu" class="primary-btn">Let's Eat! ↗</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#home" class="logo">crave<span>&co.</span></a>
+    <p>Good food brings us together.</p>
+    <span>© 2026 Crave & Co. · Made with ♥</span>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <dialog class="cart-dialog" id="cartDialog">
+    <div class="cart-header">
+      <h2>Your order 🛍</h2>
+      <button id="closeCart" class="close-btn" aria-label="Close cart">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">₹0</strong>
+      </div>
+      <button class="primary-btn checkout-btn" id="checkoutBtn">Place order</button>
+      <small class="cart-hint">Demo only — no real order will be placed.</small>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
